@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>?</title>
+<link rel="stylesheet" href="themes/my-custom-theme.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+<link rel="stylesheet" href="panelCSS/jquery.mobile.black-sidebar-theme.css"/>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+<script src="js/myScripts.js"></script> 
+
+
+</head>
+
+	<body>
+	
+	<!--This is Login Page! first (-1-) app page-->
+	
+	<div data-role="page" id="loginSignUp" data-theme="a" >
+			<div data-role="header" data-position="inline">
+				<h1>Login/SignUp</h1>
+			</div>
+
+		<div data-role="content" data-theme="a" style="background-image:url('im2.jpg'); background-attatchment:fixed;background-repeat:no-repeat;background-size:100% 100%">
+		<center><h1 style="font-family:verdana;color:blue;">YumYum Recipes</h1>
+		<h2 style="font-family:verdana;color:blue;">Get yourself ready to be a chef!</h2></center>
+		<form>
+      <div class="ui-field-contain">
+        <label for="fullname">User:</label>
+        <input type="text" name="user" id="user" placeholder="Your username">   
+<br>    
+        <label for="password">Password:</label>
+        
+        <input type="password" name="password" id="password" placeholder="Don't tell anyone">
+<br>
+   
+
+		</div>
+    </form>
+		<div style="float:right; margin-right:27px;">
+	 <a href="#signUp" data-role="button" data-inline="true" >Sign Up</a>
+		<input type="submit" id="invjj" data-inline="true" value="Login" onclick="login()">
+		</div>
+		<br><br><br><br><br><br>
+	</div>
+		
+	<div data-role="footer" data-position="fixed"><center><h3>Small step for a big change</h3></center></div>
+	
+	
+</div>
+
+	
+<!--This is the end of the Login Page!-->	
+
+	
+	<div data-role="page" id="signUp" data-theme="a">
+			<div data-role="header" data-position="inline">
+				<h1>SignUp</h1>
+			</div>
+
+		<div data-role="content" data-theme="a" style="background-image:url('im2.jpg'); background-attatchment:fixed;background-repeat:no-repeat;background-size:100% 100%">
+		<center><h2>Quick process to start cooking</h2>
+		<h4>Don't get used to it...</h4>
+		</center>
+		<form>
+		
+      <div class="ui-field-contain">
+        <label for="fullname">User:</label>
+        <input type="text" name="user" id="userS">   
+<br>    
+        <label for="password">Password:</label>
+        <input type="text" name="password" id="passwordS">
+	<br>
+   
+
+	</div>
+    </form>
+		
+		<div style="float:right; margin-right:27px;">
+		<input type="submit" id="jkjkh" data-inline="true" value="SignUp" onclick="signUps()">
+		
+		</div>
+		<br><br><br><br><br><br>
+		
+	</div>
+
+	<div data-role="footer" align="center" data-position="fixed">
+  
+<a href="#loginSignUp" data-role="button" data-icon="back">Back</a>
+	</div>	
+</div>
+	
+	
+	
+	
+	
+	
+	
+<div data-role="page" id="home" data-theme="a">
+ <div data-role="panel" id="panel" data-position="right" data-theme="g" data-display="push""> 
+    <h2>My Account</h2>
+    <p>Menu Options:</p>
+    <input type="submit" id="logOut" data-inline="true" value="Log Out" onclick="logOut()">
+  </div> 
+			<div data-role="header" data-position="inline">
+				<h1>Recipes Home</h1>
+				<a href="#panel" class="ui-btn ui-btn-right" style="float:right">Settings</a>
+			</div>
+
+		<div data-role="content" data-theme="a">
+		<h2 style="text-align:center">Recipes Category</h2>
+
+		<center><img src="categories.jpg" width="100px" height="100px"></center>
+		
+		
+		<div data-role="fieldcontain">
+<fieldset data-role="controlgroup">
+  
+    <input type="radio" name="categoryInv" id="pasta1" value="Pasta" checked="checked">
+    <label for="pasta1">Pasta</label>
+    <input type="radio" name="categoryInv" id="meat2" value="Meat">
+    <label for="meat2">Meat</label>
+    <input type="radio" name="categoryInv" id="cakes3" value="Cakes">
+    <label for="cakes3">Cakes</label>
+    <input type="radio" name="categoryInv" id="drinks4" value="Drinks">
+    <label for="drinks4">Drinks</label>
+ 
+</fieldset>
+
+</div>	
+
+<center><input type="submit" id="showInv1" data-inline="true" value="Show!" onclick="showInvCategory()"></center>
+</div>
+
+<div data-role="footer" >
+  <div data-role="navbar">
+ <ul>
+ <li><a href="#AddRecipe" data-role="button">Add Recipe</a></li>
+ 
+ 
+ <li><input type="submit" id="trying" value="My Recipes" onclick="personalInventory()"></li>
+ 
+ </ul>
+    </div>
+</div>
+
+
+</div>
+
+
+<div data-role="page" id="AddRecipe" data-theme="a">
+			<div data-role="header" data-position="inline">
+		<h1>Add Your Own Recipe</h1>
+			</div>
+			
+
+<div data-role="content" data-theme="a">
+		<h2>Recipe Details</h2>
+		<br>
+<fieldset data-role="controlgroup" >
+    <legend>Category:</legend>
+    <input type="radio" name="radio" id="one" value="Pasta" checked="checked">
+    <label for="one">Pasta</label>
+    <input type="radio" name="radio" id="two" value="Meat">
+    <label for="two">Meat</label>
+    <input type="radio" name="radio" id="three" value="Cakes">
+    <label for="three">Cakes</label>
+    <input type="radio" name="radio" id="four" value="Drinks">
+    <label for="four">Drinks</label>
+</fieldset>
+
+ <form>
+      <div class="ui-field-contain">
+        <label for="fullname">Full name:</label>
+        <input type="text" name="fullname" id="fullName" placeholder="The Chef's Name">   
+<br>    
+        <label for="RecipT">Title:</label>
+        <input type="text" name="titleRecipe" id="title" placeholder="The Best Recipe Ever!">
+<br>
+        <label for="textarea-16">Materials:</label>
+                    <textarea cols="40" rows="5" name="textarea-16" id="materials" data-role="none" placeholder="Which materials?"></textarea>
+      
+<br>
+
+
+    </form>
+</div>
+<label for="textarea-16">Exact Description:</label>
+                    <textarea cols="40" rows="5" name="textarea-16" id="description" data-role="none" placeholder="Give us all the details you know!"></textarea>
+
+      <input type="submit" id="opendialog" data-inline="true" value="Submit" onclick="myFunc()">
+		</div>
+
+<div data-role="footer" align="center">
+<a href="#home" data-role="button" data-icon="home">Home</a>
+</div>
+</div>
+
+
+<div data-role="page" id="all" data-theme="a">
+		<div data-role="header" data-position="fixed">
+			<h1>Recipes Inventory</h1>
+		</div>
+		<div data-role="content" data-theme="a">
+		<h2>Recipes</h2>
+		<div class="hello" id="new"></div>
+		</div>
+
+<div data-role="footer" data-position="fixed">
+ <div data-role="navbar">
+ <ul>
+ <li><a href="#AddRecipe" data-role="button" data-icon="plus">Add Your Recipe</a></li>
+ <li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+ </ul>
+</div>   
+</div>
+
+</div>
+
+<div data-role="page" id="UpdateRecipe" data-theme="a">
+			<div data-role="header" data-position="inline">
+		<h1>Update Your Own Recipe</h1>
+			</div>
+			
+
+<div data-role="content" data-theme="a">
+		<h2>Recipe Details</h2>
+		<br>
+<fieldset data-role="controlgroup" >
+    <legend>Category:</legend>
+    <input type="radio" name="update" id="oneUpdate" value="Pasta">
+    <label for="oneUpdate">Pasta</label>
+    <input type="radio" name="update" id="twoUpdate" value="Meat">
+    <label for="twoUpdate">Meat</label>
+    <input type="radio" name="update" id="threeUpdate" value="Cakes">
+    <label for="threeUpdate">Cakes</label>
+    <input type="radio" name="update" id="fourUpdate" value="Drinks">
+    <label for="fourUpdate">Drinks</label>
+</fieldset>
+
+ <form>
+      <div class="ui-field-contain">
+        <label for="fullname">Full name:</label>
+        <input type="text" name="fullname" id="fullNameUpdate" placeholder="The Chef's Name">   
+<br>    
+        <label for="RecipT">Title:</label>
+        <input type="text" name="titleRecipe" id="titleUpdate" placeholder="The Best Recipe Ever!">
+<br>
+        <label for="textarea-16">Materials:</label>
+                    <textarea cols="40" rows="5" name="textarea-16" id="materialsUpdate" data-role="none" placeholder="Which materials?"></textarea>
+      
+<br>
+    
+
+    </form>
+</div>
+<div id="CouponId" style="display:none"></div>
+<label for="textarea-16">Exact Description:</label>
+                    <textarea cols="40" rows="5" name="textarea-16" id="descriptionUpdate" data-role="none" placeholder="Give us all the details you know!"></textarea>
+
+      <input type="submit" id="opendialogUpdate" data-inline="true" value="Update" onclick="UpdateRecipe()">
+		</div>
+
+<div data-role="footer" align="center">
+<a href="#home" data-role="button" data-icon="home">Home</a>
+</div>
+</div>
+
+	</body>
+</html>
